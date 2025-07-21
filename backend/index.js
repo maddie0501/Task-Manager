@@ -8,8 +8,11 @@ const app = express();
 
 const PORT = 8082;
 
+const DB_URL = process.env.MONGO_URL;
+// console.log("MONGO_URL:", DB_URL);
+
 mongoose
-  .connect(process.env.MONGO_URI, {
+  .connect(DB_URL, {
     useNewURLParser: true,
     useUnifiedTopology: true,
   })
