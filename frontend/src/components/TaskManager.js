@@ -17,19 +17,21 @@ export const TaskManager = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+  const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchTasks = async () => {
       try {
         const response = await axios.get(`${API_URL}/tasks`);
         setTasks(response.data);
+      
       } catch (err) {
         console.error("Error fetching tasks:", err);
       } finally {
         setLoading(false);
       }
     };
+      console.log("API_URL:", API_URL);
 
     fetchTasks();
   }, [API_URL]);
