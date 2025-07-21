@@ -32,7 +32,7 @@ export const TaskManager = () => {
     };
 
     fetchTasks();
-  }, []);
+  }, [API_URL]);
 
   const handleAddClick = () => {
     setIsEditing(false);

@@ -50,7 +50,7 @@ const TaskTable = ({
           </TableRow>
         </TableHead>
         <TableBody>
-          {tasks.map((task) => (
+          {Array.isArray(tasks) &&  tasks.map((task) => (
             <TableRow key={task._id}>
               <TableCell>
                 <Tooltip title={task.title}>
