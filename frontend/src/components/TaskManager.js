@@ -31,7 +31,7 @@ export const TaskManager = () => {
         setLoading(false);
       }
     };
-      console.log("API_URL:", API_URL);
+      //console.log("API_URL:", API_URL);
 
     fetchTasks();
   }, [API_URL]);
